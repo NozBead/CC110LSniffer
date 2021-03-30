@@ -13,6 +13,7 @@ radiatorctl: $(OBJSFULL)
 	$(CC) $(CFLAGS) -o $@ $^
 
 $(OBJSDIR)/%.o: %.c
+	mkdir -p $(OBJSDIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
